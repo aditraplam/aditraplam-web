@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aditraplam</title>
+  <meta name="description" content="aditraplam — próximamente">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23e8a33d'/></svg>">
+  <style>
+    :root { --bg:#0f1115; --fg:#eef0f3; --muted:#8a919e; --accent:#e8a33d; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html,body { height:100%; }
+    body {
+      background: radial-gradient(1200px 600px at 70% -10%, #1d2230 0%, var(--bg) 60%);
+      color:var(--fg);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      display:flex; flex-direction:column; justify-content:center; align-items:center;
+      padding:2rem; text-align:center;
+    }
+    .dot { width:14px; height:14px; border-radius:50%; background:var(--accent);
+           box-shadow:0 0 24px var(--accent); margin-bottom:2rem; animation:pulse 2.4s ease-in-out infinite; }
+    h1 { font-size:clamp(2.6rem, 9vw, 5.5rem); font-weight:700; letter-spacing:-0.03em; }
+    p { color:var(--muted); font-size:clamp(1rem, 2.5vw, 1.25rem); margin-top:1rem; }
+    footer { position:fixed; bottom:1.5rem; color:var(--muted); font-size:.85rem; }
+    @keyframes pulse { 0%,100% { opacity:1; transform:scale(1);} 50% { opacity:.5; transform:scale(.85);} }
+  </style>
+</head>
+<body>
+  <div class="dot" aria-hidden="true"></div>
+  <h1>aditraplam</h1>
+  <p>Algo se está cocinando. Muy pronto, aquí.</p>
+  <footer>&copy; <span id="y">2026</span> aditraplam.com</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
